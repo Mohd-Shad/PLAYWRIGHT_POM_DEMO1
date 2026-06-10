@@ -21,3 +21,4 @@ export class LogoutPage {
     await this.success_message.toBeVisible();
   }
 }
+
