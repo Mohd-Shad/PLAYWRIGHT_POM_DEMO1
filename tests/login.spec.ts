@@ -31,6 +31,7 @@ test("Logout test", async ({ page }) => {
   const Login = new LoginPage(page);
   await Login.gotoLoginPage();
   await Login.login("tomsmith", "SuperSecretPassword!");
+  await Login.verifySuccessfulLogin();
   const Logout = new LogoutPage(page);
   await Logout.logout();
 });
