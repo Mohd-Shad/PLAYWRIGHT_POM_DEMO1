@@ -23,6 +23,16 @@ export class LoginPage {
     await this.username_textbox.fill(username);
     await this.password_textbox.fill(password);
     await this.login_button.click();
-    await expect(this.success_message).toBeVisible();
   }
+
+  async verifySuccessfulLogin(): Promise<void> {
+  //await expect(this.page.getByText("Secure Area")).toBeVisible();
+  await expect(this.success_message).toBeVisible();
+}
+
+async verifyInvalidLogin(): Promise<void> {
+  await expect(
+    this.page.getByText("Your username is invalid!")
+  ).toBeVisible();
+}
 }

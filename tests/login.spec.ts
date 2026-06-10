@@ -8,6 +8,7 @@ test("Login test", async ({ page }) => {
 
   await Login.gotoLoginPage();
   await Login.login(config.username, config.password);
+  await Login.verifySuccessfulLogin();
 
   // await page.goto("https://the-internet.herokuapp.com/login");
   // await page.getByRole("textbox", { name: "Username" }).click();
@@ -23,14 +24,13 @@ test("LOGIN with invalid credentials", async ({ page }) => {
   const Login = new LoginPage(page);
   await Login.gotoLoginPage();
   await Login.login("invalidUser", "invalidPassword");
-  await expect(page.getByText('Your username is invalid! ×')).toBeVisible();
+  await Login.verifyInvalidLogin();
 });
 
 test("Logout test", async ({ page }) => {
   const Login = new LoginPage(page);
   await Login.gotoLoginPage();
   await Login.login("tomsmith", "SuperSecretPassword!");
-
   const Logout = new LogoutPage(page);
   await Logout.logout();
 });
@@ -39,7 +39,7 @@ test("Login with blank fields", async ({ page }) => {
   const Login = new LoginPage(page);
   await Login.gotoLoginPage();
   await Login.login("", "");
-  await expect(page.getByText('Your username is invalid! ×')).toBeVisible();
+  await Login.verifyInvalidLogin();
 });
 
 
