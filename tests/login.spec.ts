@@ -33,10 +33,11 @@ test("Logout test", async ({ page }) => {
   await Logout.logout();
 });
 
-test("Logout with invalid credentials", async ({ page }) => {
+test("Login with blank fields", async ({ page }) => {
   const Login = new LoginPage(page);
   await Login.gotoLoginPage();
-  await Login.login("tomsmith", "SuperSecretPassword!");
+  await Login.login("", "");
+  await expect(page.getByText('Your username is invalid! ×')).toBeVisible();
 });
 /*
 await page.goto('https://the-internet.herokuapp.com/login');
