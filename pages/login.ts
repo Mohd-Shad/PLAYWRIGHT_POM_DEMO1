@@ -15,9 +15,9 @@ export class LoginPage {
     this.success_message = page.getByText("You logged into a secure area!");
   }
 
-  async gotoLoginPage(): Promise<void> {
-    await this.page.goto("https://the-internet.herokuapp.com/login");
-  }
+  // async gotoLoginPage(): Promise<void> {
+  //   await this.page.goto("https://the-internet.herokuapp.com/login");
+  // }
 
   async login(username: string, password: string): Promise<void> {
     await this.username_textbox.fill(username);
