@@ -38,12 +38,14 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "on-first-retry",
-    browserName: "chromium", // Set the default browser to Chromium
-    headless: false, // Run tests in headless mode
+    trace: "retain-on-failure",
+    //browserName: "chromium", // Set the default browser to Chromium
+    //headless: false, // Run tests in headless mode
+    //video: "retain-on-failure", // Record videos only on test failure
+    //screenshot: "only-on-failure" // Capture screenshots only on test failure
+
     launchOptions: {
       // Add any launch options here, such as headless: false for debugging
-      //headless: false,
       slowMo: 500, // Slow down actions by 50ms to better observe test execution
     },
   },
