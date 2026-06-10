@@ -15,6 +15,9 @@ export class LogoutPage {
 
   async logout(): Promise<void> {
     await this.logout_button.click();
+  }
+
+  async verifyLogoutSuccessfully(){
     await this.success_message.toBeVisible();
   }
 }

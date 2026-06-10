@@ -34,6 +34,7 @@ test("Logout test", async ({ page }) => {
   await Login.verifySuccessfulLogin();
   const Logout = new LogoutPage(page);
   await Logout.logout();
+  await Logout.verifyLogoutSuccessfully();
 });
 
 test("Login with blank fields", async ({ page }) => {
