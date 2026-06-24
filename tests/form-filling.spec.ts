@@ -12,4 +12,5 @@ test("Sample Form Filling", async ({page}) => {
     await page.locator('[id="inlineRadio2"]').check();
     await page.locator('input[type="date"]').fill('2000-04-15');
     await page.locator('input[type="submit"]').click();
+    
 })
