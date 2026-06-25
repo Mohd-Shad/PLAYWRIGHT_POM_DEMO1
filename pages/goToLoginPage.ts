@@ -19,8 +19,8 @@ export class GoToLoginPage{
         
         //await this.page.goto('/forgot_password');  //If you ever add a page extension later, you only provide the sub-path
         // This verifies that the page URL strictly matches your global baseURL
-        await expect(this.page).toHaveURL('/'); 
-        
+        await expect(this.page).toHaveURL(''); 
+
         await expect(this.pageOpenConfirmation).toBeVisible();
     }
 }
