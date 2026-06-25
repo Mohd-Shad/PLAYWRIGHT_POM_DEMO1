@@ -2,12 +2,17 @@ import { test, expect } from "../fixtures/pageFixtures";
 import config from "../config/configReader";
 import userData from "../test-data/userData.json";
 
+console.log(userData.user1.email);
+
 test.beforeEach(async ({ goToLoginPage }) => {
   await goToLoginPage.goToLoginPage();
 });
 
 test("Login test", async ({ loginPage }) => {
-  await loginPage.login(config.username, config.password);
+  //await loginPage.login(config.username, config.password);
+  const username = process.env.APP_USERNAME || '';
+  const password = process.env.APP_PASSWORD || '';
+  await loginPage.login(username,password);
   await loginPage.verifySuccessfulLogin();
 });
 

@@ -1,4 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
+import dotenv from 'dotenv';
+import path from 'path';
 
 /**
  * Read environment variables from file.
@@ -11,6 +13,9 @@ import { defineConfig, devices } from "@playwright/test";
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+const environment = process.env.NODE_ENV || 'dev';
+dotenv.config({ path: path.resolve(__dirname, `.env.${environment}`) });
+
 export default defineConfig({
   testDir: "./tests",
   /* Maximum time one test can run for. */
@@ -36,6 +41,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
+     baseURL: process.env.BASE_URL, 
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
