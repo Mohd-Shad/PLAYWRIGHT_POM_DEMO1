@@ -15,7 +15,7 @@ export class GoToLoginPage{
         // await this.page.goto(config.url);
 
         // Playwright expands this to: https://herokuapp.com
-        await this.page.goto('/');
+        await this.page.goto('');
         
         //await this.page.goto('/forgot_password');  //If you ever add a page extension later, you only provide the sub-path
         // This verifies that the page URL strictly matches your global baseURL
