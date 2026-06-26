@@ -11,6 +11,9 @@ test.beforeEach(async ({ goToLoginPage }) => {
 
 test("Login test", async ({ loginPage }) => {
   //await loginPage.login(config.username, config.password);
+  // const { APP_USERNAME, APP_PASSWORD } = process.env;
+  //await loginPage.login(APP_USERNAME, APP_PASSWORD);
+  
   const username = process.env.APP_USERNAME || '';
   const password = process.env.APP_PASSWORD || '';
   await loginPage.login(username,password);
