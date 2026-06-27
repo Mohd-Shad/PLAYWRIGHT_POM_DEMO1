@@ -21,6 +21,7 @@ export default defineConfig({
   /* Maximum time one test can run for. */
   // await page.waitForTimeout(3000) // This will wait for 3 seconds before performing the next action.
   timeout: 30 * 1000,
+  //globalTimeout:
   expect: {
     /* Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
