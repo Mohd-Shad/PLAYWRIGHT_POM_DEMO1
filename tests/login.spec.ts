@@ -1,8 +1,9 @@
 import { test, expect } from "../fixtures/pageFixtures";
-import config from "../config/configReader";
-import userData from "../test-data/userData.json";
+import config from "../utils/configReader";
+import userData from "../config/userData.json";
 
 console.log(userData.user2.firstname);
+console.log(config.username);
 
 test.beforeEach(async ({ goToLoginPage }) => {
   await goToLoginPage.goToLoginPage();

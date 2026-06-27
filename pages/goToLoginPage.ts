@@ -1,5 +1,5 @@
 import {Page, expect} from "@playwright/test";
-import config from "../config/configReader";
+import config from "../utils/configReader";
 
 export class GoToLoginPage{
     readonly page : Page;
