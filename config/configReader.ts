@@ -3,7 +3,8 @@ import * as path from 'path';
 
 const env = process.env.ENV || 'qa';
 
-const configPath = path.resolve(__dirname, `${env}.json`);
+// Go into the 'env' folder right next to this file
+const configPath = path.resolve(__dirname, 'env', `${env}.json`);
 
 const data = fs.readFileSync(configPath, 'utf-8');
 
