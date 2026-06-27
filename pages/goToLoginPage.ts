@@ -12,7 +12,10 @@ export class GoToLoginPage{
 
     async goToLoginPage(){
         // await this.page.goto("https://the-internet.herokuapp.com/login");
-        await this.page.goto(config.url);
+        //await this.page.goto(config.url);
+
+        // 🌟 This automatically opens your global environment URL (e.g., dev, qa, or prod)
+        await this.page.goto('/login'); 
         await expect(this.pageOpenConfirmation).toBeVisible();
     }
 }

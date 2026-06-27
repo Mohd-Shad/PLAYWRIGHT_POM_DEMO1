@@ -1,4 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
+// 1. Import your working config reader
+import configData from './config/configReader';
 
 /**
  * Read environment variables from file.
@@ -36,6 +38,9 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
+
+    // Tell Playwright to use the "url" property from your active json config file
+    baseURL: configData.url, 
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
