@@ -22,7 +22,6 @@ export class LoginPage {
   }
 
   async verifySuccessfulLogin(): Promise<void> {
-  //await expect(this.page.getByText("Secure Area")).toBeVisible();
   await expect(this.success_message).toBeVisible();
 }
 
