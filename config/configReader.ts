@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const env = process.env.ENV || 'qa';
+const env = process.env.ENV || 'dev';
 
 // Go into the 'env' folder right next to this file
 const configPath = path.resolve(__dirname, 'env', `${env}.json`);
