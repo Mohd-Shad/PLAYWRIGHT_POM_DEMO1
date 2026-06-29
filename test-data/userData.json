@@ -1,14 +1,16 @@
 {
     "user1":{
-        "firstname":"John",
+        "name":"John",
         "lstname":"Doe",
         "email":"testjohn@yopmail.com",
-        "phone":"876543219"
+        "phone":"876543219",
+        "password":"Test123@"
     },
     "user2":{
-        "firstname":"User2",
+        "name":"User2",
         "lastname":"test",
         "email":"user2@yopmail.com",
-        "phone":"8978757665"
+        "phone":"8978757665",
+        "password":"Test123@"
     }
 }
