@@ -23,7 +23,6 @@ test("Login with blank fields", async ({ loginPage }) => {
   await loginPage.verifyInvalidLogin();
 });
 
-
 test("Logout test", async ({ loginPage, logoutPage }) => {
   await loginPage.login("tomsmith", "SuperSecretPassword!");
   await loginPage.verifySuccessfulLogin();
