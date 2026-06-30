@@ -1,4 +1,4 @@
-import { test, expect } from "../../fixtures/pageFixtures";
+import { test } from "../../fixtures/pageFixtures";
 import config from "../../config/configReader";
 import userData from "../../test-data/userData.json";
 

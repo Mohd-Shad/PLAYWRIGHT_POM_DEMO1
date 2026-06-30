@@ -3,7 +3,7 @@ import userData from "../test-data/userData.json"
 
 export class RegistrationPage{
     readonly page;
-    readonly title
+    readonly title;
     readonly heading;
     readonly name_textbox;
     readonly email_textbox;
