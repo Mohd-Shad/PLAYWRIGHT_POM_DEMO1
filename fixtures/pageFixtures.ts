@@ -1,12 +1,12 @@
 import { test as base } from "@playwright/test";
 import { LoginPage } from "../pages/login";
 import { LogoutPage } from "../pages/logout";
-import { GoToLoginPage } from "../pages/goToLoginPage";
+import { LandingPage } from "../pages/landingPage";
 
 type MyFixtures = {
   loginPage: LoginPage;
   logoutPage: LogoutPage;
-  goToLoginPage: GoToLoginPage;
+  landingPage: LandingPage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -18,8 +18,8 @@ export const test = base.extend<MyFixtures>({
     await use(new LogoutPage(page));
   },
 
-  goToLoginPage: async ({ page }, use) => {
-    await use(new GoToLoginPage(page));
+  landingPage: async ({ page }, use) => {
+    await use(new LandingPage(page));
   },
 });
 

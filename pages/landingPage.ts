@@ -1,7 +1,7 @@
 import {Page, expect} from "@playwright/test";
 import config from "../config/configReader";
 
-export class GoToLoginPage{
+export class LandingPage{
     readonly page : Page;
     readonly pageOpenConfirmation;
 
@@ -10,7 +10,7 @@ export class GoToLoginPage{
         this.pageOpenConfirmation = page.getByText("Login Page");
     }
 
-    async goToLoginPage(){
+    async loginPage(){
         // await this.page.goto("https://the-internet.herokuapp.com/login");
         //await this.page.goto(config.url);
 
