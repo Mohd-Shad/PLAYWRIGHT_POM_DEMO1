@@ -11,6 +11,20 @@ test("Registration Form", async ({page})=>{
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // test("Sample Form Filling", async ({page}) => {
 //     await page.goto("https://rahulshettyacademy.com/angularpractice/");
 
