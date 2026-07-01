@@ -10,7 +10,7 @@ type MyFixtures = {
   logoutPage: LogoutPage;
   landingPage: LandingPage;
   registrationPage: RegistrationPage;
-  upLoadDownloadPage: UploadDownloadPage;
+  uploadDownloadPage: UploadDownloadPage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -30,7 +30,7 @@ export const test = base.extend<MyFixtures>({
     await use(new RegistrationPage(page));
   },
 
-  upLoadDownloadPage: async ({ page}, use) =>{
+  uploadDownloadPage: async ({ page}, use) =>{
     await use(new UploadDownloadPage(page));
   },
 });
