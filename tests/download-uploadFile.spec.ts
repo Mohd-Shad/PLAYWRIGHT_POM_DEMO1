@@ -1,26 +1,21 @@
-import {test, expect} from "@playwright/test";
-import { UploadDownloadPage } from "../pages/uploadDownloadPage";
+import { test, expect } from "../fixtures/pageFixtures";
 
-test.describe("downloaduploadFile", () => {
+
   
-  test("downloadingFile", async ({ page }) => {
-    const uploadDownloadPage = new UploadDownloadPage(page);
+  test("downloadingFile", async ({ uploadDownloadPage }) => {
     const customFolder = "C:/Users/mohdusmani/OneDrive/Automation/PLAYWRIGHT_POM_DEMO1/downloads";
     // Perform business logic actions through the class instance
     await uploadDownloadPage.navigateToPage();
     await uploadDownloadPage.downloadExcelFile(customFolder);
   });
 
-  test("uploadingFile", async ({ page }) => {
-    const uploadDownloadPage = new UploadDownloadPage(page);
+  test("uploadingFile", async ({ uploadDownloadPage }) => {
     const filePath = "C:/Users/mohdusmani/OneDrive/Automation/PLAYWRIGHT_POM_DEMO1/downloads/download.xlsx";
-
     await uploadDownloadPage.navigateToPage();
     await uploadDownloadPage.uploadExcelFile(filePath);
     await expect(uploadDownloadPage.successMessage).toBeVisible();
   });
 
-});
 
 
 

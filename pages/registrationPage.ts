@@ -33,11 +33,7 @@ export class RegistrationPage{
     async landingPage(){
         await this.page.goto("https://rahulshettyacademy.com/angularpractice");
     }
-    async verifyTitle(){
-        console.log(await this.title);
-        await expect(this.heading).toBeVisible();
-    }
-
+    
     async formFilling(){
         await this.name_textbox.fill(userData.user1.name);
         await this.email_textbox.fill(userData.user1.email);
@@ -50,8 +46,5 @@ export class RegistrationPage{
         await expect(this.radio_button).toBeChecked();
         await this.dob.fill("2000-04-15");
         await this.sub_button.click();
-    }
-    async verifySuccessMessage(){
-        await expect(this.success_message).toBeVisible();
     }
 }

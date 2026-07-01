@@ -10,7 +10,6 @@ export class UploadDownloadPage {
 
   constructor(page: Page) {
     this.page = page;
-    // Initialize element locators using Playwright's locator strategies
     this.downloadButton = page.getByRole('button', { name: 'Download' });
     this.chooseFileButton = page.getByRole('button', { name: 'Choose File' });
     this.successMessage = page.getByText("Updated Excel Data Successfully.");

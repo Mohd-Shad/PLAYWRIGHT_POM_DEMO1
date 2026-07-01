@@ -1,13 +1,12 @@
-import {test} from "@playwright/test";
-import { RegistrationPage } from "../pages/registrationPage";
+import { test, expect } from "../fixtures/pageFixtures";
 
 
-test("Registration Form", async ({page})=>{
-    const registrationPage = new RegistrationPage(page);
+test("Registration Form", async ({registrationPage})=>{ 
     await registrationPage.landingPage();
-    await registrationPage.verifyTitle();
+    console.log(await registrationPage.title);
+    await expect(registrationPage.heading).toBeVisible();
     await registrationPage.formFilling();
-    await registrationPage.verifySuccessMessage();
+    await expect(registrationPage.success_message).toBeVisible();
 })
 
 
