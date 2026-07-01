@@ -1,7 +1,5 @@
 import { test, expect } from "../fixtures/pageFixtures";
 
-
-  
   test("downloadingFile", async ({ uploadDownloadPage }) => {
     const customFolder = "C:/Users/mohdusmani/OneDrive/Automation/PLAYWRIGHT_POM_DEMO1/downloads";
     // Perform business logic actions through the class instance
