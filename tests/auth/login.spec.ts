@@ -1,9 +1,5 @@
 import { test } from "../../fixtures/pageFixtures";
 import config from "../../config/configReader";
-import userData from "../../test-data/userData.json";
-
-console.log(userData.user2.name);
-console.log(config.username);
 
 test.beforeEach(async ({ landingPage }) => {
   await landingPage.loginPage();
