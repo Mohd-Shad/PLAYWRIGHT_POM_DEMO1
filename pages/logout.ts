@@ -8,16 +8,10 @@ export class LogoutPage {
   constructor(page: Page) {
     this.page = page;
     this.logout_button = page.getByRole("link", { name: "Logout" });
-    this.success_message = expect(
-      page.getByText("You logged out of the secure area!"),
-    );
+    this.success_message = page.getByText("You logged out of the secure area!");
   }
 
   async logout(): Promise<void> {
     await this.logout_button.click();
-  }
-
-  async verifyLogoutSuccessfully(){
-    await this.success_message.toBeVisible();
   }
 }
