@@ -1,5 +1,4 @@
 import { defineConfig, devices } from "@playwright/test";
-// 1. Import your working config reader
 import configData from './config/configReader';
 
 /**
@@ -46,10 +45,15 @@ export default defineConfig({
     baseURL: configData.url, 
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "retain-on-failure",
-    headless: false, // Run tests in headless mode
-    video: "retain-on-failure", // Record videos only on test failure
-    screenshot: "only-on-failure", // Capture screenshots only on test failure
+    // trace: "retain-on-failure", // Retain trace only on test failure
+    // headless: false, // Run tests in headless mode
+    // video: "retain-on-failure", // Record videos only on test failure
+    // screenshot: "only-on-failure", // Capture screenshots only on test failure
+
+    trace: "on",
+    screenshot: "on",
+    video: "on",
+
 
     launchOptions: {
       // Add any launch options here, such as headless: false for debugging
