@@ -6,6 +6,8 @@ import userData from "../test-data/userData.json";
 import { GoToLoginPage } from "../pages/goToLoginPage";
 
 
+console.log(userData.user1.email);
+console.log(userData.user2.email);
 test.beforeEach("Go To Login Page", async ({ page})=>{
   const goToLoginPage = new GoToLoginPage(page);
   await goToLoginPage.goToLoginPage()
