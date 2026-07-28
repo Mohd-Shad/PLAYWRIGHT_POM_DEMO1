@@ -56,7 +56,7 @@ await page.goto('https://the-internet.herokuapp.com/login');
 /*
 Page Object Model (POM) in Playwright – Easy Interview Explanation
 
-What is POM?
+What is POM? -> states that for every webpage there must be a separate class
 
 Page Object Model (POM) is a design pattern where we keep all page locators and page actions in a separate class/file instead of writing them directly in test scripts.
 
